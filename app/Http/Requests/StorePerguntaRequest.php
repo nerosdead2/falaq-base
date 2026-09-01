@@ -24,6 +24,8 @@ class StorePerguntaRequest extends FormRequest
     {
         return [
             // TODO (Dev Jr): Adicione as regras de validação para o Ticket #001
+            "texto"=> ["required", "min:10", "max:255"],
+            "evento_id"=> ["required", "exists:eventos,id"]
         ];
     }
 }
